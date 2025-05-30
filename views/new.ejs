@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e6f7ff; /* Light sky blue background */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #0077cc; /* Deeper sky blue */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 119, 204, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 2px solid #4d9dd3;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #0077cc;
+            outline: none;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #3191d1;
+            border-radius: 6px;
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 150px;
+            transition: border-color 0.3s;
+        }
+
+        textarea:focus {
+            border-color: #0077cc;
+            outline: none;
+        }
+
+        button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        ::placeholder {
+            color: #99d6ff;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create a new Post</h1>
+   <form method="post" action="http://localhost:8082/posts">
+    <input type="text" placeholder="username" name="username"><br><br>
+   <textarea rows="8" cols="10" name="content"></textarea><br><br>
+    <button>Submit</button>
+   </form> 
+</body>
+</html>

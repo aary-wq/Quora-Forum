@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>post:<%= post.username %></title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e6f7ff; /* Light sky blue background */
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h2 {
+            color: #0077cc; /* Deeper sky blue */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #b3e0ff;
+            padding-bottom: 10px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .contain {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 119, 204, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .contain h3:first-child {
+            color: #0077cc;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .contain h3:nth-child(2) {
+            color: #333;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            white-space: pre-wrap; /* Preserves line breaks in content */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .contain {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2>Details of post #<%= post.id %></h2>
+    <div class="contain"><h3>@<%= post.username %></h3>
+        <h3><%= post.content %></h3></div>
+</body>
+</html>

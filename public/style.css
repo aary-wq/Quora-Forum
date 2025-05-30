@@ -1,0 +1,179 @@
+/* style.css - Ultra Attractive Styling Without HTML Changes */
+:root {
+    --primary: #4361ee;
+    --secondary: #3f37c9;
+    --accent: #f72585;
+    --dark: #1a1a2e;
+    --light: #f8f9fa;
+    --success: #4cc9f0;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    color: var(--dark);
+    min-height: 100vh;
+    margin: 0;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 2rem 0;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  body > div > div {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  
+  body > div > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  }
+  
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body > div > div h3:first-child {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  body > div > div h3:first-child::before {
+    content: "👤";
+  }
+  
+  body > div > div h3:nth-child(2) {
+    color: var(--dark);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed rgba(67, 97, 238, 0.2);
+  }
+  
+  a {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    background: var(--primary);
+    color: white;
+    margin-right: 0.8rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.3);
+    background: var(--secondary);
+  }
+  
+  button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-right: 0.8rem;
+  }
+  
+  button a {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    color: white;
+  }
+  
+  button a:hover {
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+  }
+  
+  button:nth-of-type(1) {
+    background: var(--success);
+    color: white;
+  }
+  
+  button:nth-of-type(1):hover {
+    background: #38b6db;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 201, 240, 0.3);
+  }
+  
+  .contain button {
+    background: var(--accent);
+    color: white;
+  }
+  
+  .contain button:hover {
+    background: #e5177e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(247, 37, 133, 0.3);
+  }
+  
+  body > button {
+    display: block;
+    margin: 3rem auto 0;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    color: white;
+    font-size: 1.1rem;
+    max-width: 300px;
+    border: none;
+  }
+  
+  body > button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(247, 37, 133, 0.3);
+  }
+  
+  body > button a {
+    background: transparent;
+    color: white;
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  body > div > div {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  body > div > div:nth-child(odd) {
+    animation-delay: 0.5s;
+  }
